@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 'use strict';
 
 const express = require('express');
@@ -17,7 +18,7 @@ function getCategories(req, res, next) {
       const output = {
         count: data.length,
         results: data,
-      }
+      };
       res.status(200).json(output);   
     }).catch(next);
 }
@@ -45,9 +46,9 @@ function deleteCategories(req, res, next) {
     .then(data => {
       let output ={
         results: data,
-        msg: 'ITEM DELETED'
-      }
+        msg: 'ITEM DELETED',
+      };
       res.status(200).json(output);
-    })
+    });
 }
 module.exports = router;

@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 'use strict';
 
 const express = require('express');
@@ -17,7 +18,7 @@ function getProducts(req, res, next) {
       const output = {
         count: data.length,
         results: data,
-      }
+      };
       res.status(200).json(output);
     }).catch(next);
 }
@@ -31,18 +32,18 @@ function addProducts(req, res, next) {
   products.create(req.body)
     .then(data => {
       res.status(201).json(data);
-    })
+    });
 }
 function updateProducts(req, res, next) {
   products.update(req.params.id, req.body)
     .then(data => {
       res.status(200).json(data);
-    }).catch(next)
+    }).catch(next);
 }
 function deleteProducts(req, res, next) {
   products.delete(req.params.id)
     .then(data => {
       res.status(200).json(data);
-    }).catch(next)
+    }).catch(next);
 }
 module.exports = router;

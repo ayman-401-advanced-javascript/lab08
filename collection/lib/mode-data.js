@@ -6,7 +6,7 @@ class Model {
   }
 
   jsonSchema() {
-    return typeof this.schema.jsonSchema === 'function' ? this.schema.jsonSchema() : {}
+    return typeof this.schema.jsonSchema === 'function' ? this.schema.jsonSchema() : {};
   }
 
   get(_id) {

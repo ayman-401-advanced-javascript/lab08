@@ -19,6 +19,6 @@ module.exports = {
   server: app,
   start: port =>{
     let PORT = port || process.env.PORT || 3000;
-    app.listen(PORT,()=>console.log(`server is listening to port: ${PORT}`))
-  }
-}
+    app.listen(PORT,()=>console.log(`server is listening to port: ${PORT}`));
+  },
+};
